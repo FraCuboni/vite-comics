@@ -5,7 +5,46 @@ export default{
 </script>
 
 <template>
-    <h1>FooterTop</h1>
+    <div class="container">
+        <div class="box">
+            <ul>
+                <h3>title</h3>
+                <li>abc</li>
+                <li>abc</li>
+                <li>abc</li>
+                <li>abc</li>
+                <li>abc</li>
+                <li>abc</li>
+            </ul>
+            <ul>
+                <h3>title</h3>
+                <li>abc</li>
+                <li>abc</li>
+                <li>abc</li>
+                <li>abc</li>
+                <li>abc</li>
+                <li>abc</li>
+            </ul>
+            <ul>
+                <h3>title</h3>
+                <li>abc</li>
+                <li>abc</li>
+                <li>abc</li>
+                <li>abc</li>
+                <li>abc</li>
+                <li>abc</li>
+            </ul>
+            <ul>
+                <h3>title</h3>
+                <li>abc</li>
+                <li>abc</li>
+                <li>abc</li>
+                <li>abc</li>
+                <li>abc</li>
+                <li>abc</li>
+            </ul>
+        </div>
+    </div>
 </template>
 
 <style lang="scss" scoped>
@@ -13,7 +52,10 @@ export default{
 @use '../styles/partials/mixins' as *;
 @use '../styles/partials/variables' as *;
 
-h1{
-    color: black;
+.container{
+    padding: $section_padding;
+    color: white;
+    background-image: url(../assets/footer-bg.jpg);
+    background-size: cover;
 }
 </style>

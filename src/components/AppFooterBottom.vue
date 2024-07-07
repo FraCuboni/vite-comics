@@ -5,7 +5,21 @@ export default{
 </script>
 
 <template>
-    <h1>FooterBottom</h1>
+    <div class="container">
+        <div class="box"><button>button</button></div>
+        <div class="box">
+            <ul>
+                <li>
+                    <p>follow us</p>
+                </li>
+                <li class="logo">LG</li>
+                <li class="logo">LG</li>
+                <li class="logo">LG</li>
+                <li class="logo">LG</li>
+                <li class="logo">LG</li>
+            </ul>
+        </div>
+    </div>
 </template>
 
 <style lang="scss" scoped>
@@ -13,7 +27,9 @@ export default{
 @use '../styles/partials/mixins' as *;
 @use '../styles/partials/variables' as *;
 
-h1{
-    color: black;
+.container{
+    background-color: $dark_text;
+    padding: $section_padding;
+    color: white;
 }
 </style>

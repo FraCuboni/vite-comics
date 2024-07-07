@@ -18,6 +18,7 @@ export default{
 
 .container{
     background-color: black;
+    padding: $section_padding;
     
     h1{
         color: white;

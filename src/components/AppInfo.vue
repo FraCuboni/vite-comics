@@ -5,7 +5,15 @@ export default{
 </script>
 
 <template>
-    <h1>Sezione info</h1>
+    <div class="container">
+        <ul>
+            <li>INFO</li>
+            <li>INFO</li>
+            <li>INFO</li>
+            <li>INFO</li>
+            <li>INFO</li>
+        </ul>
+    </div>
 </template>
 
 <style lang="scss" scoped>
@@ -13,6 +21,10 @@ export default{
 @use '../styles/partials/mixins' as *;
 @use '../styles/partials/variables' as *;
 
+.container{
+    background-color: $brand_primary;
+    padding: $section_padding;
+}
 h1{
     color: black;
 }
