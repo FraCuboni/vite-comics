@@ -24,8 +24,10 @@ export default{
 .container{
     background-color: $brand_primary;
     padding: $section_padding;
-}
-h1{
-    color: black;
+
+    ul{
+        display: flex;
+        justify-content: space-between;
+    }
 }
 </style>
