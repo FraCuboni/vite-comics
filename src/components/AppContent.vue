@@ -5,11 +5,22 @@ export default{
 </script>
 
 <template>
-    <h1>Sezione Content</h1>
+    <div class="container">
+        <h1>->Content goes Here<-</h1>
+
+    </div>
 </template>
 
 <style lang="scss" scoped>
-h1{
-    color: black;
+@use '../styles/general.scss' as *;
+@use '../styles/partials/mixins' as *;
+@use '../styles/partials/variables' as *;
+
+.container{
+    background-color: black;
+    
+    h1{
+        color: white;
+    }
 }
 </style>

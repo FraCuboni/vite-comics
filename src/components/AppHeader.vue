@@ -8,7 +8,9 @@ export default{
 <template>
     <div class="container">
 
-        <div class="logo">DC</div>
+        <div class="logo">
+            <img src="../assets/dc-logo.png" alt="">
+        </div>
         
         <ul>
             <li>CHARACTERS</li>
@@ -33,14 +35,19 @@ export default{
 @use '../styles/partials/variables' as *;
 
 .container{
-    width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: red;
     color: $brand_primary;
+    padding: $section_padding;
+    background-color: red;
 
     ul{
         display: flex;
+        gap: 20px;
+
+        li a{
+            color: $brand_primary ;
+        }
     }
 }
 

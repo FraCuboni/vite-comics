@@ -16,15 +16,11 @@
 </script>
 
 <template>
-  <div class="container">
-
     <Header/>
     <Content/>
     <Info/>
     <FooterTop/>
     <FooterBottom/>
-
-  </div>
 </template>
 
 <style lang="scss" scoped>
