@@ -61,7 +61,9 @@ export default{
         </div>
 
         <div class="box-2">
-            <img src="../assets/dc-logo-bg.png" alt="">
+            <div>
+                <img src="../assets/dc-logo-bg.png" alt="">
+            </div>
         </div>
 
     </div>
@@ -80,10 +82,13 @@ export default{
 
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
 
     .box-1{
         display: flex;
+        min-height: 100px;
         gap: 40px;
+        flex: 0 1 auto;
 
         .column ul li{
 
@@ -100,8 +105,16 @@ export default{
     }
 
     .box-2{
-        img{
-            opacity: 0.5;
+        flex-grow: 1;
+        position: relative;
+
+        div{
+                position: absolute;
+                aspect-ratio: 1/1;
+                transform: translate(-50%, -50%);
+                left: 50%;
+                top: 50%;
+
         }
     }
 }

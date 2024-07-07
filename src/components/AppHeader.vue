@@ -37,9 +37,10 @@ export default{
 .container{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    
     color: $brand_primary;
     padding: $section_padding;
-    background-color: red;
 
     ul{
         display: flex;
