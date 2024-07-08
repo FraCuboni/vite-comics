@@ -1,6 +1,54 @@
 <script>
 export default{
     name : 'Header',
+
+    data(){
+        return{
+            logo : '',
+            links :[
+                {
+                    text:'CHARACTERS',
+                    url:'#',
+                },
+                {
+                    text:'COMICS',
+                    url:'#',
+                },
+                {
+                    text:'MOVIES',
+                    url:'#',
+                },
+                {
+                    text:'TV',
+                    url:'#',
+                },
+                {
+                    text:'MOVIES',
+                    url:'#',
+                },
+                {
+                    text:'COLLECTIBLES',
+                    url:'#',
+                },
+                {
+                    text:'VIDEOS',
+                    url:'#',
+                },
+                {
+                    text:'FANS',
+                    url:'#',
+                },
+                {
+                    text:'NEWS',
+                    url:'#',
+                },
+                {
+                    text:'SHOP',
+                    url:'#',
+                },
+            ]
+        }
+    }
 }
 </script>
 
@@ -13,16 +61,7 @@ export default{
         </div>
         
         <ul>
-            <li>CHARACTERS</li>
-            <li>COMICS</li>
-            <li>MOVIES</li>
-            <li>TV</li>
-            <li>GAMES</li>
-            <li>COLLECTIBLES</li>
-            <li>VIDEOS</li>
-            <li>FANS</li>
-            <li>NEWS</li>
-            <li>SHOP</li>
+            <li v-for="(link, index) in links" :key="index">{{ link.text }}</li>
         </ul>
 
     </div>
@@ -48,6 +87,7 @@ export default{
 
         li a{
             color: $brand_primary ;
+            background-color: red;
         }
     }
 }

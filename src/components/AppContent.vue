@@ -1,12 +1,16 @@
 <script>
+import Card from '../components/Card.vue'
 export default{
     name : 'Content',
+    components : {
+        Card,
+    }
 }
 </script>
 
 <template>
     <div class="container">
-        <h1>->Content goes Here<-</h1>
+    <Card/>
 
     </div>
 </template>
@@ -19,6 +23,9 @@ export default{
 .container{
     background-color: black;
     padding: $section_padding;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     
     h1{
         color: white;
