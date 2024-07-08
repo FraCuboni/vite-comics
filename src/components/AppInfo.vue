@@ -1,41 +1,44 @@
 <script>
 export default{
     name : 'Info',
+
+    data(){
+        return{
+            datas : [
+                {
+                    img : '../../src/assets/buy-comics-digital-comics.png',
+                    text : 'DIGITAL COMICS',
+                },
+                {
+                    img : '../../src/assets/buy-comics-merchandise.png',
+                    text : 'MERCHANDISE',
+                },
+                {
+                    img : '../../src/assets/buy-comics-subscriptions.png',
+                    text : 'SUBSCRIPTION',
+                },
+                {
+                    img : '../../src/assets/buy-comics-shop-locator.png',
+                    text : 'COMIC SHOP LOCATOR',
+                },
+                {
+                    img : '../../src/assets/buy-dc-power-visa.svg',
+                    text : 'DC POWER VISA',
+                },
+            ]
+        }
+    }
 }
 </script>
 
 <template>
     <div class="container">
         <ul>
-            <li>
+            <li v-for="(element,index) in datas" :key="index">
                 <div>
-                    <img src="../assets/buy-comics-digital-comics.png" alt="">
+                    <img :src="element.img" alt="">
                 </div>
-                <p>DIGITAL COMICS</p>
-            </li>
-            <li>
-                <div>
-                    <img src="../assets/buy-comics-merchandise.png" alt="">
-                </div>
-                <p>MERCHANDISE</p>
-            </li>
-            <li>
-                <div>
-                    <img src="../assets/buy-comics-subscriptions.png" alt="">
-                </div>
-                <p>SUBSCRIPTION</p>
-            </li>
-            <li>
-                <div>
-                    <img src="../assets/buy-comics-shop-locator.png" alt="">
-                </div>
-                <p>COMIC SHOP LOCATOR</p>
-            </li>
-            <li>
-                <div>
-                    <img src="../assets/buy-dc-power-visa.svg" alt="">
-                </div>
-                <p>DC POWER VISA</p>
+                <p>{{ element.text }}</p>
             </li>
         </ul>
     </div>
