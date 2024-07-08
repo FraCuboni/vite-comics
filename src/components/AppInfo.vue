@@ -69,6 +69,10 @@ export default{
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
+                img{
+                    max-height: 100%;
+                }
             }
 
             p{

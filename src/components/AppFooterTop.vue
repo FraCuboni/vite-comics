@@ -1,6 +1,58 @@
 <script>
 export default{
     name : 'FooterTop',
+
+    data(){
+        return{
+            links: [
+            {
+                name: 'DC COMICS',
+                links: [
+                    'Characters',
+                    'Comics',
+                    'Movies',
+                    'TV',
+                    'Games',
+                    'Videos',
+                    'News'
+                ]
+            },
+            {
+                name: 'SHOP',
+                links: [
+                    'Shop DC',
+                    'Shop DC Collectibles'
+                ]
+            },
+            {
+                name: 'DC',
+                links: [
+                    'Terms Of Use',
+                    'Privacy policy (New)',
+                    'Ad Choices',
+                    'Advertising',
+                    'Jobs',
+                    'Subscriptions',
+                    'Talent Workshops',
+                    'CPSC Certificates',
+                    'Ratings',
+                    'Shop Help',
+                    'Contact Us'
+                ]
+            },
+            {
+                name: 'SITES',
+                links: [
+                    'DC',
+                    'MAD Magazine',
+                    'DC Kids',
+                    'DC Universe',
+                    'DC Power Visa'
+                ]
+            }
+        ]
+        }
+    }
 }
 </script>
 
@@ -8,56 +60,11 @@ export default{
     <div class="container">
 
         <div class="box-1">
-            <div class="column">
-
-                <ul>
-                    <li><h3>SITES</h3></li>
-                    <li><p>abc</p></li>
-                    <li><p>abc</p></li>
-                    <li><p>abc</p></li>
-                    <li><p>abc</p></li>
-                    <li><p>abc</p></li>
-                    <li><p>abc</p></li>
-                </ul>
-                <ul>
-                    <li><h3>SITES</h3></li>
-                    <li><p>abc</p></li>
-                    <li><p>abc</p></li>
-                    <li><p>abc</p></li>
-                    <li><p>abc</p></li>
-                    <li><p>abc</p></li>
-                    <li><p>abc</p></li>
-                </ul>
-
-            </div>
-            
-            <div class="column">
-
-                <ul>
-                    <li><h3>SITES</h3></li>
-                    <li><p>abc</p></li>
-                    <li><p>abc</p></li>
-                    <li><p>abc</p></li>
-                    <li><p>abc</p></li>
-                    <li><p>abc</p></li>
-                    <li><p>abc</p></li>
-                </ul>
-                
-            </div>
-            
-            <div class="column">
-
-                <ul>
-                    <li><h3>SITES</h3></li>
-                    <li><p>abc</p></li>
-                    <li><p>abc</p></li>
-                    <li><p>abc</p></li>
-                    <li><p>abc</p></li>
-                    <li><p>abc</p></li>
-                    <li><p>abc</p></li>
+                <ul v-for="list in links">
+                    <li><h3>{{ list.name }}</h3></li>
+                    <li v-for="link in list.links"><p>{{ link }}</p></li>
                 </ul>
             
-            </div>
         </div>
 
         <div class="box-2">
@@ -86,11 +93,12 @@ export default{
 
     .box-1{
         display: flex;
-        min-height: 100px;
+        flex-direction: column;
         gap: 40px;
-        flex: 0 1 auto;
+        flex-wrap: wrap;
+        max-height: 300px;
 
-        .column ul li{
+        ul li{
 
             h3{
                 padding: 5px 0;
@@ -107,12 +115,14 @@ export default{
     .box-2{
         flex-grow: 1;
         position: relative;
+        justify-content: space-between;
 
         div{
+            height: 180%;
                 position: absolute;
                 aspect-ratio: 1/1;
-                transform: translate(-50%, -50%);
-                left: 50%;
+                transform: translate(-20%, -50%);
+                right: 0;
                 top: 50%;
 
         }

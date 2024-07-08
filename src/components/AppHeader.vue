@@ -77,6 +77,7 @@ export default{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-height: 120px;
     
     color: $brand_primary;
     padding: $section_padding;
